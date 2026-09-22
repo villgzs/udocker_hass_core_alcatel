@@ -5,8 +5,8 @@ source "$(dirname "${BASH_SOURCE[0]}")/source.env"
 #IMAGE_NAME="homeassistant/home-assistant:2025.6"
 #IMAGE_NAME="homeassistant/home-assistant:2025.11.3"
 #IMAGE_NAME="ghcr.io/adyoull/ha-armv7:2026.7.2"
-IMAGE_NAME="dockergzs/hass-core:python3.14-alpine3.24-2026.7.2-armv7"
-IMAGE_NAME="ghcr.io/villgzs/hass-core32:2026.9.3"
+#IMAGE_NAME="dockergzs/hass-core:python3.14-alpine3.24-2026.7.2-armv7"
+IMAGE_NAME="ghcr.io/villgzs/hass-core32:armv7-2026.9.3"
 CONTAINER_NAME="home-assistant-core"
 
 # Set timezone, eg, Asia/Seoul. Feel free to change.
