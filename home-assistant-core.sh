@@ -3,11 +3,20 @@ source "$(dirname "${BASH_SOURCE[0]}")/source.env"
 
 # The script will find and download the image from Docker Hub, not from GitHub Container Registry
 #IMAGE_NAME="homeassistant/home-assistant:2025.6"
+
+#Last official image:
 #IMAGE_NAME="homeassistant/home-assistant:2025.11.3"
+
 #IMAGE_NAME="ghcr.io/adyoull/ha-armv7:2026.7.2"
-#IMAGE_NAME="dockergzs/hass-core:python3.14-alpine3.24-2026.7.2-armv7"
-IMAGE_NAME="ghcr.io/villgzs/hass-core32:armv7-2026.9.3"
+
+# Docker
+IMAGE_NAME="dockergzs/homeassistant-armv7:armv7-2026.10.1"
+
+# Github:
+IMAGE_NAME="ghcr.io/villgzs/hass-core32:armv7-2026.10.1"
 CONTAINER_NAME="home-assistant-core"
+
+echo " - start with: $IMAGE_NAME"
 
 # Set timezone, eg, Asia/Seoul. Feel free to change.
 TZ="Europe/Budapest"
@@ -32,6 +41,7 @@ udocker_prune
 
 # Create the Home Assistant container
 echo create
+# udocker_create "$CONTAINER_NAME" "$IMAGE_NAME" "--platform=linux/arm/v7"
 udocker_create "$CONTAINER_NAME" "$IMAGE_NAME"
 
 # If arguments are passed, run them directly in the container
