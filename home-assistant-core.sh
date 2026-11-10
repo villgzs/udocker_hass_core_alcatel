@@ -7,13 +7,11 @@ source "$(dirname "${BASH_SOURCE[0]}")/source.env"
 #Last official image:
 #IMAGE_NAME="homeassistant/home-assistant:2025.11.3"
 
-#IMAGE_NAME="ghcr.io/adyoull/ha-armv7:2026.7.2"
+# Github:
+#IMAGE_NAME="ghcr.io/villgzs/hass-core32:2026.11.1"
 
 # Docker
-IMAGE_NAME="dockergzs/homeassistant-armv7:armv7-2026.10.1"
-
-# Github:
-IMAGE_NAME="ghcr.io/villgzs/hass-core32:armv7-2026.10.1"
+IMAGE_NAME="dockergzs/armv7-homeassistant:2026.11.1"
 CONTAINER_NAME="home-assistant-core"
 
 echo " - start with: $IMAGE_NAME"
@@ -43,6 +41,8 @@ udocker_prune
 echo create
 # udocker_create "$CONTAINER_NAME" "$IMAGE_NAME" "--platform=linux/arm/v7"
 udocker_create "$CONTAINER_NAME" "$IMAGE_NAME"
+
+touch ~/.udocker/containers/"$CONTAINER_NAME"/ROOT/.dockerenv
 
 # If arguments are passed, run them directly in the container
 if [ -n "$1" ]; then
