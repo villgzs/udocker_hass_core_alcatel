@@ -1,4 +1,9 @@
+[Remarks](docs/REMARKS.md)
+
 ## Installing Home Assistant Core on Android: Simple and Fast, No Root, No QEMU
+
+  **Warning** 
+  *Starting with Home Assistant release 2026.11.0, checks regarding the Python virtual environment and container execution have been significantly tightened. With the original script version (courtesy of authors George-Seven and huytungst), Home Assistant will terminate shortly after startup, throwing the error message: "Home Assistant must be run in a Python virtual environment or a container." Consequently, the initialization script has been updated compared to previous releases by incorporating an additional `touch` command.*
 
 Got an old Android phone and don’t want to buy a Raspberry Pi or a PC to host Home Assistant? This tutorial is for you!
 
