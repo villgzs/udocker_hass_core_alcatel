@@ -8,7 +8,6 @@ This message can be avoided if a file is present, which can be created with the 
 
 ```
 touch ~/.udocker/containers/"$CONTAINER_NAME"/ROOT/.dockerenv
-
 ```
 
 
