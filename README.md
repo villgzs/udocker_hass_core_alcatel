@@ -1,3 +1,5 @@
+[Remarks](docs/REMARKS.md)
+
 ## Installing Home Assistant Core on Android: Simple and Fast, No Root, No QEMU
 
   **Warning** 
