@@ -1,5 +1,3 @@
-Here is the English translation of your text:
-
 Starting with the Home Assistant Core 2026.11.0 release, the runtime environment restrictions have been tightened. This causes it to stop shortly after startup in a udocker environment.
 
 `"Home Assistant must be run in a Python virtual environment or a container."`
